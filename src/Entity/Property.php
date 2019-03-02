@@ -57,7 +57,7 @@ class Property
     private $city;
 
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="boolean", options={"default": false})
      */
     private $sold;
 
@@ -151,6 +151,11 @@ class Property
     public function getPrice(): ?int
     {
         return $this->price;
+    }
+
+    public function getFormatedPrice(): ?string
+    {
+        return number_format($this->price, 0, '', ' ');
     }
 
     public function setPrice(int $price): self

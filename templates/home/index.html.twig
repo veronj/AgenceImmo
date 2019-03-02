@@ -7,4 +7,22 @@
 <h1>Agence Immo</h1>
 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed quos asperiores nihil, nisi quasi illum deleniti delectus. Iusto impedit excepturi magnam? Fuga corrupti odit voluptatum officiis? Impedit labore nulla nam?</lorel></p>
 </div>
+
+<div class="container">
+<div class="row flex">
+    {% for property in properties %}
+        <div class="col-3">
+        <div class="card">
+        <div class="card-body">
+        <h5 class="card-title">
+        <a href="#">{{ property.title }}</a>
+        </h5>
+        <p class="card-text">{{ property.city }}</p>
+        <div class="text-primary">{{ property.formatedPrice }} €</div>
+        </div>
+        </div>
+        </div>
+    {% endfor %}
+</div>
+</div>
 {% endblock %}
