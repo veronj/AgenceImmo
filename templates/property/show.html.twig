@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello PropertyController!{% endblock %}
+{% block title %}Property view{% endblock %}
 
 {% block body %}
 <div class="jumbotron text-center">
@@ -10,19 +10,19 @@
 
 <div class="container">
 <div class="row flex">
-    {% for property in properties %}
+    
         <div class="col-3">
         <div class="card">
         <div class="card-body">
         <h5 class="card-title">
-        <a href="{{ path('property.show', {'id': property.id}) }}">{{ property.title }}</a>
+        {{ property.title }}
         </h5>
         <p class="card-text">{{ property.city }}</p>
         <div class="text-primary">{{ property.formatedPrice }} €</div>
         </div>
         </div>
         </div>
-    {% endfor %}
+    
 </div>
 </div>
 {% endblock %}

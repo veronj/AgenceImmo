@@ -28,4 +28,19 @@ class PropertyController extends AbstractController
             'properties' => $properties
         ]);
     }
+
+    /**
+     * @Route("/property/{id}", name="property.show")
+     */
+    public function show($id) 
+    {
+        $property = $this->repository->find($id);
+        
+        return $this->render('property/show.html.twig', [
+            'controller_name' => 'PropertyController',
+            
+            'property' => $property
+        ]);
+    }
+
 }
