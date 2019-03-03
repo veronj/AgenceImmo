@@ -4,8 +4,8 @@
 
 {% block body %}
 <div class="jumbotron text-center">
-<h1>Agence Immo</h1>
-<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed quos asperiores nihil, nisi quasi illum deleniti delectus. Iusto impedit excepturi magnam? Fuga corrupti odit voluptatum officiis? Impedit labore nulla nam?</lorel></p>
+<h1>Sisi</h1>
+<p>Lorem ipsum dolor, sit amet jb jb pisicing elit. Sed quos asperiores nihil, nisi quasi illum deleniti delectus. Iusto impedit excepturi magnam? Fuga corrupti odit voluptatum officiis? Impedit labore nulla nam?</lorel></p>
 </div>
 
 <div class="container">
@@ -16,6 +16,7 @@
         <div class="card-body">
         <h5 class="card-title">
         <a href="{{ path('property.show', {'id': property.id}) }}">{{ property.title }}</a>
+        ({{ property.rooms }} rooms)
         </h5>
         <p class="card-text">{{ property.city }}</p>
         <div class="text-primary">{{ property.formatedPrice }} €</div>

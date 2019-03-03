@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Admin panel{% endblock %}
+
+{% block body %}
+<h1>Ajouter une propriété</h1>
+<div class="container">
+<div class="row flex">
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <button class="btn btn-primary">Save</button>
+    {{ form_end(form) }}
+</div>
+</div>
+{% endblock %}
