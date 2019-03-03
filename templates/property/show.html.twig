@@ -11,16 +11,16 @@
 <div class="container">
 <div class="row flex">
     
-        <div class="col-3">
-        <div class="card">
-        <div class="card-body">
-        <h5 class="card-title">
-        {{ property.title }}
-        </h5>
+        <div class="col-8">
+        
+        <h1 class="card-title">       {{ property.title }}        </h1>
+        <h2>{{ property.rooms }} pièces - {{ property.surface }} m²</h2>
+
         <p class="card-text">{{ property.city }}</p>
+
+
         <div class="text-primary">{{ property.formatedPrice }} €</div>
-        </div>
-        </div>
+        <a href="#" class="btn btn-primary">Nous Contacter</a>
         </div>
     
 </div>
