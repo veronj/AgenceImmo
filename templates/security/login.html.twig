@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Login page{% endblock %}
+
+{% block body %}
+<div class="jumbotron text-center">
+<h1>Sisi</h1>
+<p>Lorem ipsum dolor, sit amet jb jb pisicing elit. Sed quos asperiores nihil, nisi quasi illum deleniti delectus. Iusto impedit excepturi magnam? Fuga corrupti odit voluptatum officiis? Impedit labore nulla nam?</lorel></p>
+</div>
+
+<div class="container">
+
+<form action="{{ path('login') }}" method="post">
+{% if error %}
+        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+{% endif %}
+<div class="form-group">
+<label for="username">Nom d'utilisateur</label>
+<input type="text" id="username" name="_username" class="form-control" value="{{ last_username }}">
+
+<label for="password">Mot de passe</label>
+<input type="password" id="password" name="_password" class="form-control">
+
+<button type="submit" class="btn btn-primary">Se connecter</button>
+</form>
+</div>
+
+</div>
+{% endblock %}

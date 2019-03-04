@@ -3,12 +3,19 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\PropertyRepository")
  */
 class Property
 {
+
+    const HEAT = [
+        0 => 'Electrique',
+        1 => 'Gaz'
+    ];
+
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
@@ -28,6 +35,7 @@ class Property
 
     /**
      * @ORM\Column(type="integer")
+     * @Assert\Range(min=10, max=400)
      */
     private $surface;
 

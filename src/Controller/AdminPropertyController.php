@@ -20,10 +20,12 @@ class AdminPropertyController extends AbstractController
     }
 
     /**
-     * @Route("/admin/property", name="admin.property.index")
+     * @Route("/admin/properties", name="admin.property.index")
      */
     public function index()
     {
+        
+        
         $properties = $this->repository->findAll();
         
         return $this->render('admin_property/index.html.twig', [
