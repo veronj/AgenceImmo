@@ -214,6 +214,11 @@ class Property
         return $this->heat;
     }
 
+    public function getFormatedHeat(): ?string
+    {
+        return $this::HEAT[$this->heat];
+    }
+
     public function setHeat(int $heat): self
     {
         $this->heat = $heat;
